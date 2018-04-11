@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hp.fedcash.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/monthly_cash"
+            android:layout_width="118dp"
+            android:layout_height="48dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Get Monthly Cash" />
+
+        <RadioButton
+            android:id="@+id/daily_cash"
+            android:layout_width="96dp"
+            android:layout_height="53dp"
+            android:layout_alignRight="@+id/monthly_cash"
+            android:onClick="onRadioButtonClicked"
+            android:text="Get Daily Cash" />
+
+        <RadioButton
+            android:id="@+id/yearly_avg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/monthly_cash"
+            android:layout_alignParentEnd="false"
+            android:onClick="onRadioButtonClicked"
+            android:text="Get Yearly Avg" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/text_year"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/radioGroup"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="33dp"
+        android:text="Enter Year between 2006 and 2012" />
+
+    <EditText
+        android:id="@+id/edit_year"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:text=""
+        android:layout_alignTop="@+id/text_year"
+        android:layout_toEndOf="@+id/text_year"
+        android:layout_marginStart="13dp" />
+
+    <TextView
+        android:id="@+id/text_day"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="Enter Day"
+        android:layout_below="@+id/text_year"
+        android:layout_alignStart="@+id/text_year"
+        android:layout_marginTop="32dp" />
+
+    <EditText
+        android:id="@+id/edit_day"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:text=""
+        android:layout_alignTop="@+id/text_day"
+        android:layout_alignStart="@+id/edit_year" />
+
+    <TextView
+        android:id="@+id/text_month"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/text_day"
+        android:layout_below="@+id/text_day"
+        android:layout_marginTop="24dp"
+        android:text="Enter Month" />
+
+    <EditText
+        android:id="@+id/edit_month"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:text=""
+        android:layout_alignTop="@+id/text_month"
+        android:layout_alignStart="@+id/edit_year" />
+
+    <TextView
+        android:id="@+id/text_workingdays"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/text_month"
+        android:layout_below="@+id/text_month"
+        android:layout_marginTop="22dp"
+        android:text="Enter working days b/w 5 to 25" />
+
+    <EditText
+        android:id="@+id/edit_workingdays"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:text=""
+        android:layout_alignTop="@+id/text_workingdays"
+        android:layout_alignStart="@+id/edit_month" />
+
+    <Button
+        android:id="@+id/getResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:text="Get Result"
+        android:layout_below="@+id/text_workingdays"
+        android:layout_alignStart="@+id/text_workingdays"
+        android:layout_marginTop="28dp" />
+
+    <TextView
+        android:id="@+id/textview_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:layout_alignStart="@+id/edit_workingdays"
+        android:layout_below="@+id/edit_workingdays"
+        android:layout_alignEnd="@+id/radioGroup"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity2"
+        android:layout_below="@+id/getResults"
+        android:layout_alignStart="@+id/getResults" />
+
+</RelativeLayout>
